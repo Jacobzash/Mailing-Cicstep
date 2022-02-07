@@ -5,14 +5,17 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Grupo;
+use App\Models\Contactos;
 
 class Grupos extends Component
 {
     use WithPagination;
 
-	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $namegrupo, $description;
+	protected $paginationTheme = 'tailwind';
+    public $selected_id, $keyWord, $namegrupo, $description, $msj;
     public $isModalOpen = 0;
+
+    protected $listeners = ['delete'];
 
     protected $rules = [
 
@@ -32,7 +35,7 @@ protected $messages = [
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
-        return view('livewire.grupos.view', [
+        return view('livewire.grupos.show', [
             'grupos' => Grupo::latest()
 						->orWhere('namegrupo', 'LIKE', $keyWord)
 						->orWhere('description', 'LIKE', $keyWord)
@@ -66,6 +69,7 @@ protected $messages = [
 
     public function store()
     {
+
         $validatedData = $this->validate();
 
         Grupo::updateOrCreate(['id' => $this->selected_id], [
@@ -73,8 +77,11 @@ protected $messages = [
 			'description' => $this-> description
         ]);
 
-        session()->flash('message', $this->selected_id ? 'Grupo actualizado correctamente.' : 'Grupo creado correctamente.');
+
         $this->closeModalPopover();
+        $this->msj="Guardado Correctamente";
+
+        $this->emit('savegrupo',$this->msj);
         $this->resetInput();
     }
 
@@ -88,12 +95,11 @@ protected $messages = [
 
         $this->openModalPopover();
     }
-    public function delete($id)
+    public function delete(Grupo $id)
     {
-        Grupo::find($id)->delete();
 
-        session()->flash('message', 'Grupo Eliminado.');
 
+        $id->delete();
 
     }
 

@@ -15,6 +15,9 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <!--sweetalert -->
+        <script src="sweetalert2.all.min.js"></script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

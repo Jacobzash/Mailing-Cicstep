@@ -12,11 +12,18 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
         @livewireStyles
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+
+
+
+
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -42,5 +49,8 @@
         @stack('modals')
 
         @livewireScripts
+        <!--flowbit-->
+        <script src="https://unpkg.com/flowbite@1.3.2/dist/flowbite.js"></script>
+        @stack('js')
     </body>
 </html>

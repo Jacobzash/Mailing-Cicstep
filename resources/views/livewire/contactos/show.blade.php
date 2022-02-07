@@ -1,6 +1,6 @@
         @section('title', __('Contactos'))
         <div>
-            <div class="max-w-full mx-auto py-10 sm:px-6 lg:px-8">
+            <div class="max-w-full mx-auto py-10 sm:px-6 lg:px-8 ">
                 @if (session()->has('message'))
                 <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3"
                     role="alert">
@@ -37,10 +37,63 @@
 
                     </div>
                 </section>
-                <section class="container mx-auto p-4">
+                <section class="flex justify-between content-center mb-2" >
+                    <div class="flex">
 
-                        <div class="w-full overflow-x-auto">
+                        <div>
+                            <div class="flex items-center ml-4">
+                                <label for="" class="font-sans mr-2 mb-0">Filtrar Grupo</label>
+                                <select wire:model="selectedgrupos">
+                                    <option value="">Grupos...</option>
+                                    @foreach ($grupos as $item)
+                                    <option value="{{ $item->id }}">{{ $item->namegrupo }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
 
+                        <br>
+                        <div class="flex max-w-lg mx-auto">
+                                @if ($checked)
+                                <div>
+                                    <div class="flex items-center ml-4">
+                                        <label for="paginate" class="font-sans mr-2 mb-0">Cambiar o Eliminar</label>
+                                        <select >
+                                            <option value="">Seleccione...</option>
+                                            <option onclick="confirm('Are you sure you want to delete these Records?') || event.stopImmediatePropagation()"
+                                            wire:click="deleteRecords()">
+                                                Eliminar
+                                                </option>
+                                            @foreach ($grupos as $item)
+                                            <option value="{{ $item->id }}">{{ $item->namegrupo }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                @endif
+                        </div>
+
+
+
+
+                        <div class="flex items-center ml-4">
+                            <label for="">Pagina</label>
+                            <select class="form-control" wire:model="paginate">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">20</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center ml-4">
+                            <label for="">Ordenar: </label>
+                            <select wire:model="sortBy">
+                                <option value="asc">ASC</option>
+                                <option value="desc">DESC</option>
+                            </select>
+                        </div>
+
+                        <div class="w-72 overflow-x-auto">
                             <label class="relative block">
                                 <span class="sr-only">Search</span>
                                 <span class="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -49,21 +102,24 @@
                                     </svg>
                                 </span>
 
-                                <input class="placeholder:italic placeholder:text-gray-400 block bg-white w-full border border-gray-300 rounded-2xl py-2 pl-9 pr-3 shadow-lg focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Contactos">
+                                <input class="placeholder:italic placeholder:text-gray-400 block bg-white w-full border
+                                border-gray-300 rounded-2xl py-2 pl-9 pr-3 shadow-lg focus:outline-none focus:border-sky-500
+                                focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                                wire:model.debounce.500ms="search" type="search" placeholder="Buscar....">
                             </label><br>
+
                         </div>
 
+                    </div>
                 </section>
-                    <section class="container mx-auto p-6 font-mono">
-                        <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+                    <section class="container mx-auto p-2 font-mono">
+                        <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xl">
                         <div class="w-full overflow-x-auto">
 
                                 <table class="table-auto divide-gray-200 w-full ">
                                 <thead>
                                     <tr class="text-sm font-mono tracking-wide text-center text-gray-700 bg-gray-100 divide-white uppercase border-b border-gray-600">
-                                        <th scope="col" width="50" class="px-4 py-3">
-                                            No.
-                                        </th>
+                                        <th class="px-4 py-3"><input type="checkbox" wire:model="selectPage"></th>
                                         <th scope="col" class="px-4 py-3">
                                             Nombres
                                         </th>
@@ -89,9 +145,10 @@
                                 <tbody class="bg-white divide-y divide-gray-200">
 
                                     @foreach($contactos as $row)
-                                    <tr class="text-gray-900 text-center">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm ">
-                                            {{ $loop->iteration }}
+                                    <tr class="text-gray-900 text-center @if ($this->isChecked($row->id))
+                                    @endif">
+                                        <td>
+                                            <input type="checkbox" value="{{ $row->id }}" wire:model="checked">
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm border border-gray-100">
                                             {{ $row->namecontacto }}
@@ -106,9 +163,14 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-ms font-bold border border-gray-100">
                                             {{ $row->phonecontacto }}
                                         </td>
+                                        @foreach ($grupos as $grupo)
+                                        @if ($grupo->id==$row->gruposid)
+
                                         <td class="px-6 py-4 whitespace-nowrap text-sm border border-gray-100">
-                                            NombreGrupos
+                                            {{ $grupo->namegrupo }}
                                         </td>
+                                        @endif
+                                        @endforeach
                                         <td class="px-6 py-4 whitespace-nowrap text-sm  font-sm border border-gray-100">
 
                                             <div class="flex items-start space-x-1">
@@ -123,7 +185,7 @@
                                                     <span class="ml-4">Editar</span>
                                                     </button>
 
-                                                    <button wire:click="delete({{ $row->id }})"
+                                                    <button  wire:click="$emit('deletecontactos',{{ $row->id }})"
                                                     class="flex px-4 py-2
                                                     bg-gradient-to-r from-red-500 via-rose-400 to-red-500
                                                     text-white  text-sm sm:text-base text-right font-bold rounded-2xl shadow-xl outline-none
@@ -141,13 +203,120 @@
                             </table>
 
                             </div>
+                            <div class=" px-80 py-6 ">
+
+                                    {{ $contactos->links() }}
+
+                            </div>
                         </div>
-                        @livewire('livewire.vendor.Paginacion''))
+
                     </section>
 
                 </div>
             </div>
         </div>
+
+        @push('js')
+            <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+            <script src="sweetalert2.all.min.js"></script>
+
+            <script>
+                Livewire.on('deletecontactos', contactosid => {
+
+                    Swal.fire({
+                        title: '¿Estas Seguro?',
+                        text: "Esta accion no se revertirá!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Si, borralo!'
+                        }).then((result) => {
+                        if (result.isConfirmed) {
+                            Livewire.emitTo('contactos','delete',contactosid);
+                            Swal.fire(
+                            'Eliminado!',
+                            'El archivo ha sido borrado.',
+                            'success'
+                            )
+                        }
+                    })
+                })
+
+
+            </script>
+
+
+<script>
+    Livewire.on('deleteallcontactos' => {
+
+        Swal.fire({
+            title: '¿Estas Seguro?',
+            text: "Esta accion no se revertirá!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, borralo!'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                Livewire.emitTo('contactos','deleteRecords');
+                Swal.fire(
+                'Eliminado!',
+                'El archivo ha sido borrado.',
+                'success'
+                )
+            }
+        })
+    })
+
+
+</script>
+
+
+            <script>
+
+                Livewire.on('savecontacto',(msj)=>{
+                        Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: (msj),
+                        showConfirmButton: false,
+                        timer: 2000
+                        })
+                    })
+
+            </script>
+
+
+            <script>
+
+                Livewire.on('deletecontacto',(msj)=>{
+                        Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: (msj),
+                        showConfirmButton: false,
+                        timer: 2000
+                        })
+                    })
+
+            </script>
+
+
+            <script>
+
+                Livewire.on('deleteallcontac',(msj)=>{
+                        Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: (msj),
+                        showConfirmButton: false,
+                        timer: 2000
+                        })
+                    })
+
+            </script>
+        @endpush
+
     </div>
-
-

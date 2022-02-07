@@ -8,6 +8,6 @@ class Metricas extends Component
 {
     public function render()
     {
-        return view('livewire.metricas');
+        return view('livewire.metricas.metricas');
     }
 }

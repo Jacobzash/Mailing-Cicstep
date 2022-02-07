@@ -1,8 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-bold text-xl text-red-600 leading-tight">
-            MAILING CICSTEP
-        </h2>
+        <h1 class="focus:outline-none text-4xl lg:text-4xl font-extrabold
+        text-center leading-10 text-gray-800  pt-4">PASO 2: MODULO CONTACTOS
+        <p class="uppercase bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-800">
+            agregar Contactos</p></h1>
+
     </x-slot>
     <div class="py-12">
         <div class="max-w-full mx-auto sm:px-6 lg:px-8">

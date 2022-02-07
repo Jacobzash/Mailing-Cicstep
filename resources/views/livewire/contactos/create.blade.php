@@ -8,17 +8,18 @@
             role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
 
-            <form>
-                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <form >
+                <div class="bg-white flex-auto px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="">
 
                             <div class="mb-4">
                                 <label for="namecontacto" class="after:content-['*'] after:ml-0.5 after:text-red-500 block font-medium text-sm text-gray-700">Nombres</label>
                                 <div class="relative">
                                     <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                                        </svg>
                                     </div>
 
                                 <input type="text" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4
@@ -75,7 +76,34 @@
                                 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
                                     id="phonecontacto" placeholder="Telefono de Contacto" wire:model="phonecontacto">
                                 @error('phonecontacto') <span class="text-red-500">{{ $message }}</span>@enderror
+                            </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="gruposid" class="after:content-['*'] after:ml-0.5
+                                after:text-red-500 block font-medium text-sm text-gray-700">Grupos</label>
+                                <div class="relative">
+                                    <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                          </svg>
+                                    </div>
+
+                                    <select wire:model="gruposid" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4
+                                    rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
+                                        <option value="Elegir" disabled>Seleccione Grupo</option>
+                                        @foreach ($grupos as $grupo)
+                                            <option value="{{ $grupo->id}}">{{ $grupo->namegrupo }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('gruposid') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div></div>
+
+
+
+
+
+
                         </div>
                     </div>
 
@@ -94,7 +122,7 @@
 
                             </button>
 
-                            <button wire:click.prevent="store()" type="button" class="bg-gradient-to-r
+                            <button  wire:click="store()" class="bg-gradient-to-r
                             from-cyan-500 to-blue-500 hover:from-lime-500 hover:to-emerald-500
                             text-white text-lg font-bold py-2 px-4 rounded-xl shadow-xl  uppercase tracking-widest
                             outline-none focus:ring-4
@@ -115,5 +143,7 @@
             </form>
         </div>
     </div>
+
 </div>
+
 

@@ -15,4 +15,14 @@ class Grupo extends Model
 
     protected $fillable = ['namegrupo','description'];
 
+    /**
+    * Run the migrations.
+    *
+    * @return void
+    */
+    public function contacto()
+    {
+        return $this->hasMany(Contactos::class);
+    }
+
 }

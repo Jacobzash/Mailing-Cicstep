@@ -3,11 +3,17 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Campanas extends Component
 {
+    use WithPagination;
+
+    protected $paginationTheme = 'tailwind';
+    public $isModalOpen = 0;
+
     public function render()
     {
-        return view('livewire.campanas');
+        return view('livewire.campanas.campanas');
     }
 }
