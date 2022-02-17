@@ -49,28 +49,26 @@
         <!--Step1 Add Grupos-->
             <div class="flex flex-col justify-center items-center relative">
                 <div class="w-56 h-12 md:flex hidden justify-center">
-                    <div class="h-full  border-teal-300 border-dashed"></div>
+                    <div class="h-full  border-teal-200 border-dashed"></div>
                 </div>
                 <div class="rounded-full w-12 h-12 text-xl text-teal-100 bg-teal-700 font-black flex justify-center items-center absolute top-0 right-0 mt-16 shadow-lg mr-2">1</div>
-
-                <img src="https://img.icons8.com/fluency/250/000000/group-task.png"
-                class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
+                <img src="https://img.icons8.com/color/250/000000/tags--v1.png" class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
                 duration-300 img-responsive w-56 h-56 rounded-full shadow my-5 object-scale-down" alt="Step1"/>
                 <div class="w-56 h-12 md:flex hidden justify-center">
                     <div class="h-full border-r-4 border-teal-300 border-dashed"></div>
                 </div>
             </div>
-            <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-teal-200">
-                <div class="md:text-3xl uppercase text-xl font-extrabold text-teal-700">Paso 1</div>
-                <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear Grupos o Etiquetas</div>
-                <div class="mt-4 text-teal-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+            <div class="ml-5 p-2 flex flex-col justify-center max-w-2xl rounded bg-teal-200">
+                <div class="md:text-3xl uppercase text-xl font-extrabold text-teal-700">Primero</div>
+                <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Diseñar nombre del Grupo o Etiqueta</div>
+                <div class="mt-4 text-teal-800 font-bold text-lg text-justify">
+                    Especificar el nombre que tendrá el grupo o etiqueta que identificará a la audiencia que recibirá nuestros mensajes.
+                    Por ejemplo, si nuestra base de datos la obtuvimos en un evento de capacitación de ChatBots, podemos colocarle como
+                    nombre o etiqueta CHATBOT seguido del mes o la numeración del evento que nos permita identificarlo sin problemas.
+                    </div>
 
             </div>
-            <x-jet-nav-link href="{{ route('grupos') }}" :active="request()->routeIs('grupos')">
-            <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
-                class=" img-responsive w-20 h-20 rounded-full shadow-lg my-5 object-scale-down
-                transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5 hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
-            </x-jet-nav-link>
+
             </div>
 
 
@@ -81,17 +79,20 @@
                         <div class="h-full border-r-4 border-pink-300 border-dashed"></div>
                     </div>
                     <div class="rounded-full w-12 h-12 text-xl text-pink-100 bg-pink-700 font-black flex justify-center items-center absolute top-0 right-0 mt-16 shadow-lg mr-2">2</div>
-                    <img alt="step2" class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150
-                    transition duration-300 w-56 h-56 rounded-full shadow my-5 object-scale-down"
-                    src="https://img.icons8.com/bubbles/250/000000/add-user-male.png"/>
+                    <img src="https://img.icons8.com/bubbles/250/000000/groups.png" alt="step2" class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150
+                    transition duration-300 w-56 h-56 rounded-full shadow my-5 object-scale-down"/>
                     <div class="w-56 h-12 md:flex hidden justify-center">
                         <div class="h-full  border-pink-300 border-dashed"></div>
                     </div>
                 </div>
-                <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-pink-200">
-                    <div class="md:text-3xl uppercase text-xl font-extrabold text-pink-500">Paso 2</div>
-                    <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear o Editar Contactos</div>
-                    <div class="mt-4 text-pink-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                <div class="ml-5 p-2 flex flex-col justify-center max-w-2xl rounded bg-pink-200">
+                    <div class="md:text-3xl uppercase text-xl font-extrabold text-pink-500">Segundo</div>
+                    <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear o Editar los Grupos diseñados</div>
+                    <div class="mt-4 text-pink-800 font-bold text-lg text-justify">
+                        En esta parte podremos crear los grupos colocándoles el nombre que previamente asignamos. También podremos editar
+                        o hacer alguna modificación posterior de ser el caso. Es muy importante que los nombres de los grupos o etiquetas
+                        guarden relación con los datos que incluimos en esas categorías.
+                    </div>
                 </div>
                 <x-jet-nav-link href="{{ route('viewgrupos') }}" :active="request()->routeIs('viewgrupos')">
                     <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
@@ -99,35 +100,6 @@
                         transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5 hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
                     </x-jet-nav-link>
                 </div>
-
-
-        <!--Step3 Import Csv-->
-            <div class="flex md:flex-row flex-col bg-indigo-200 justify-center md:text-left text-center">
-            <div class="flex flex-col justify-center items-center relative">
-                <div class="w-56 h-12 md:flex hidden justify-center">
-                    <div class="h-full border-r-4 border-indigo-300 border-dashed"></div>
-                </div>
-                <div class="rounded-full w-12 h-12 text-xl text-indigo-100 bg-indigo-700 font-black flex justify-center items-center absolute top-0 right-0 mt-16 shadow-lg mr-2">3</div>
-                <img src="https://img.icons8.com/dusk/200/000000/import-csv.png" alt="step3"
-                class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
-                duration-300 w-56 h-56 rounded-full shadow my-5 object-scale-down"/>
-                <div class="w-56 h-12 md:flex hidden justify-center">
-                    <div class="h-full border-r-4 border-indigo-300 border-dashed"></div>
-                </div>
-            </div>
-            <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-indigo-200">
-                <div class="md:text-3xl uppercase text-xl font-extrabold text-indigo-700">Paso 3</div>
-                <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Importar Contactos</div>
-                <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
-            </div>
-            <x-jet-nav-link href="{{ route('viewcontactos') }}" :active="request()->routeIs('viewcontactos')">
-                <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
-                    class=" img-responsive w-20 h-20 rounded-full shadow-lg my-5 object-scale-down
-                    transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5 hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
-                </x-jet-nav-link>
-            </div>
-
-        </div>
 
     <!--End Steps-->
     <br><br><br>

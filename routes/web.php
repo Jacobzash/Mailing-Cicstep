@@ -47,24 +47,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 //Import Contacts*************************
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('importarcsv', \App\Http\Livewire\Importarcsv::class);
+    Route::post('importarcsv/importarcsv', '\App\Http\Livewire\Importarcsv@store');
     Route::get('/importarcsv', function(){
         return view('livewire.importarcsv.importarcsv');
     })->name('importarcsv');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/csvdata', function () {
-    return view('livewire.contactos.csvdata');
-})->name('csvdata');
 
-
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-
-    Route::post('/import_parse', [\App\Http\Livewire\ImportController::class, 'parseImport'])->name('import_parse');
-    Route::post('/import_process', [\App\Http\Livewire\ImportController::class, 'processImport'])->name('import_process');
-    Route::get('/importcontroller', function(){
-        return view('livewire.importcontroller.import');
-    })->name('importcontroller');
-});
 
 
 
@@ -115,6 +104,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/viewcampanas', function () {
     return view('livewire.campanas.view');
 })->name('viewcampanas');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/showcampanas', function () {
+    return view('livewire.campanas.show');
+})->name('showcampanas');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('campanas', \App\Http\Livewire\Campanas::class);

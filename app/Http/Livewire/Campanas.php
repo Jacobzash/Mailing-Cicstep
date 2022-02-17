@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Grupo;
 use Livewire\WithPagination;
 
 class Campanas extends Component
@@ -14,6 +15,8 @@ class Campanas extends Component
 
     public function render()
     {
-        return view('livewire.campanas.campanas');
+        return view('livewire.campanas.campanas',[
+            'grupos' => Grupo::all(),
+        ]);
     }
 }

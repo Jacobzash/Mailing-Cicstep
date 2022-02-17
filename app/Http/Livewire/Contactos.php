@@ -198,6 +198,25 @@ class Contactos extends Component
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function updatedChecked()
     {
         $this->selectPage = false;

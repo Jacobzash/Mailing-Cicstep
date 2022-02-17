@@ -63,7 +63,11 @@
             <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-teal-200">
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-teal-700">Paso 1</div>
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear Grupos o Etiquetas</div>
-                <div class="mt-4 text-teal-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                <div class="mt-4 text-teal-800 font-bold text-lg text-justify">
+                    Debemos crear los grupos o etiquetas que nos permitirá identificar a nuestra base de contactos para
+                    crear las campañas. Solo debemos ingresar el nombre asignado y evitar repeticiones para tener un mejor
+                    control de cada grupo.
+                </div>
 
             </div>
             <x-jet-nav-link href="{{ route('grupos') }}" :active="request()->routeIs('grupos')">
@@ -91,7 +95,11 @@
                 <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-pink-200">
                     <div class="md:text-3xl uppercase text-xl font-extrabold text-pink-500">Paso 2</div>
                     <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear o Editar Contactos</div>
-                    <div class="mt-4 text-pink-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                    <div class="mt-4 text-pink-800 font-bold text-lg text-justify">
+                        Una vez creado el grupo, procedemos a crear los contactos para el envío de mensajes. En esta parte
+                        creamos los contactos digitando directamente en cada una de las casillas la información requerida.
+                        También podemos editar y eliminar los contactos que subamos.
+                    </div>
                 </div>
                 <x-jet-nav-link href="{{ route('viewcontactos') }}" :active="request()->routeIs('viewcontactos')">
                     <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
@@ -118,7 +126,16 @@
             <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-indigo-200">
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-indigo-700">Paso 3</div>
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Importar Contactos</div>
-                <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">
+                    Si contamos con una base de datos muy amplia, aquí podemos importar los contactos desde un archivo
+                     en Excel, previamente guardado en formato .csv (valores separados por comas). Un vez que tengamos
+                     el archivo en esa extensión podemos subirlo y automáticamente la plataforma generará los contactos.
+                     Al terminar podremos validar también la información pertinente de acuerdo a nuestras necesidades.
+                     En la imagen siguiente se muestra un ejemplo de como debemos crear la tabla en Excel, los encabezados
+                     de la tabla deben llamarse (namecontacto)-(lastnamecontacto)-(email)-(phonecontacto)-(grupos_id):
+                </div>
+                <img src="/images/importar.png" class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
+                duration-300 rounded-xl shadow-2xl shadow-gray-600 my-5 "/>
             </div>
             <x-jet-nav-link href="{{ route('importarcsv') }}" :active="request()->routeIs('importarcsv')">
                 <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"

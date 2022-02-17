@@ -66,7 +66,7 @@
 						</thead>
 						<tbody class="bg-white divide-y divide-gray-200">
 							@foreach($grupos as $row)
-							<tr class="text-gray-900 text-center">
+							<tr class="text-gray-900 items-center text-center">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm ">
                                     {{ $loop->iteration }}
                                 </td>
@@ -78,7 +78,7 @@
                                 </td>
 								<td class="px-6 py-4 whitespace-nowrap text-sm  font-sm border border-gray-100">
 
-                                    <div class="flex items-start space-x-1">
+                                    <div class="flex items-center space-x-1">
                                         <button wire:click="edit({{ $row->id }})"
                                         class="flex px-4 py-2
                                         bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-400
@@ -106,7 +106,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div>
+                    <div class=" px-80 py-6 ">
                         {{ $grupos->links() }}
                     </div>
 

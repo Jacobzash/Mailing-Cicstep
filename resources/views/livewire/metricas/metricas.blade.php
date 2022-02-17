@@ -8,8 +8,11 @@
     </x-slot>
 
 <!---===================== FIRST ROW CONTAINING THE  STATS CARD STARTS HERE =============================-->
+<img src="/images/goodjob.png"   alt="metricas">
+
   <div class="flex justify-center bg-gray-100 py-10 p-14">
     <!---== First Stats Container ====--->
+
   <div class="container mx-auto pr-4">
     <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
       <div class="h-20 bg-red-400 flex items-center justify-between">
@@ -39,6 +42,7 @@
   </div>
     <!---== Second Stats Container ====--->
 
+
   <!---== Third Stats Container ====--->
   <div class="container mx-auto pr-4">
     <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
@@ -67,6 +71,7 @@
       <!-- <hr > -->
     </div>
   </div>
+
   <!---== Fourth Stats Container ====--->
 </div>
 <!---===================== FIRST ROW CONTAINING THE  STATS CARD ENDS HERE =============================-->

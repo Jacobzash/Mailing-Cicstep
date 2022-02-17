@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="md:w-1/3 w-2/3">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/CTA.png" alt="cartoon avatars">
+                                <img src="/images/flamemarketing.png" class="animate-bounce"  alt="cartoon avatars">
                                 </div>
                             </div>
                         </div>
@@ -44,6 +44,10 @@
     <!-- component -->
         <div class="flex flex-col justify-center m-auto">
             <div class="flex md:flex-row flex-col bg-teal-200 justify-center md:text-left text-center">
+
+
+
+
 
 
         <!--Step1 Add Grupos-->
@@ -63,15 +67,20 @@
             <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-teal-200">
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-teal-700">Paso 1</div>
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear Grupos o Etiquetas</div>
-                <div class="mt-4 text-teal-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                <div class="mt-4 text-teal-800 font-bold text-lg text-justify">
+                    Debemos crear los grupos o etiquetas que nos permitirá identificar a nuestra base de contactos para
+                    crear las campañas. Solo debemos ingresar el nombre asignado y evitar repeticiones para tener un mejor
+                    control de cada grupo.
+                </div>
 
             </div>
-            <x-jet-nav-link href="{{ route('grupos') }}" :active="request()->routeIs('grupos')">
-            <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
-                class=" w-20 h-20 rounded-full shadow-lg my-5 object-scale-down img-responsive transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5
-                hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
-            </x-jet-nav-link>
+
             </div>
+
+
+
+
+
 
 
         <!--Step2 Add Contactos-->
@@ -91,41 +100,77 @@
                 <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-pink-200">
                     <div class="md:text-3xl uppercase text-xl font-extrabold text-pink-500">Paso 2</div>
                     <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear o Editar Contactos</div>
-                    <div class="mt-4 text-pink-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                    <div class="mt-4 text-pink-800 font-bold text-lg text-justify">
+                        Una vez creado el grupo, procedemos a crear los contactos para el envío de mensajes. En esta parte
+                        creamos los contactos digitando directamente en cada una de las casillas la información requerida.
+                        También podemos editar y eliminar los contactos que subamos.
+                    </div>
                 </div>
-                <x-jet-nav-link href="{{ route('viewcontactos') }}" :active="request()->routeIs('viewcontactos')">
-                    <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
-                        class="img-responsive w-20 h-20 rounded-full shadow-lg my-5 object-scale-down
-                        transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5 hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
-                    </x-jet-nav-link>
+
                 </div>
 
 
-        <!--Step3 Import Csv-->
-            <div class="flex md:flex-row flex-col bg-indigo-200 justify-center md:text-left text-center">
+
+
+
+
+
+        <!--Step3 Create Campanas-->
+            <div class="flex md:flex-row flex-col bg-indigo-300 justify-center md:text-left text-center">
             <div class="flex flex-col justify-center items-center relative">
                 <div class="w-56 h-12 md:flex hidden justify-center">
                     <div class="h-full border-r-4 border-indigo-300 border-dashed"></div>
                 </div>
                 <div class="rounded-full w-12 h-12 text-xl text-indigo-100 bg-indigo-700 font-black flex justify-center items-center absolute top-0 right-0 mt-16 shadow-lg mr-2">3</div>
-                <img src="https://img.icons8.com/dusk/200/000000/import-csv.png" alt="step3"
-                class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
-                duration-300 w-56 h-56 rounded-full shadow my-5 object-scale-down"/>
+                <img src="https://img.icons8.com/clouds/250/000000/commercial.png" class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
+                duration-300 w-56 h-56 rounded-full shadow my-5 object-scale-down" alt="step3"/>
                 <div class="w-56 h-12 md:flex hidden justify-center">
                     <div class="h-full border-r-4 border-indigo-300 border-dashed"></div>
                 </div>
             </div>
-            <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-indigo-200">
+            <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-indigo-300">
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-indigo-700">Paso 3</div>
-                <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Importar Contactos</div>
-                <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear Campañas</div>
+                <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">
+                    Para crear una campaña se debe seguir una secuencia de pasos y completar la información requerida.
+                </div>
             </div>
-            <x-jet-nav-link href="{{ route('viewcontactos') }}" :active="request()->routeIs('viewcontactos')">
-                <img src="https://img.icons8.com/nolan/48/filled-sent.png" role="button"
+            <x-jet-nav-link href="{{ route('viewcampanas') }}" :active="request()->routeIs('viewcampanas')">
+                <img src="https://img.icons8.com/nolan/70/filled-sent.png" role="button"
                     class="img-responsive w-20 h-20 rounded-full shadow-lg my-5 object-scale-down
                     transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5 hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
                 </x-jet-nav-link>
             </div>
+
+
+
+
+
+
+            <!--Step4 List Campanas-->
+            <div class="flex md:flex-row flex-col bg-emerald-400 justify-center md:text-left text-center">
+                <div class="flex flex-col justify-center items-center relative">
+                    <div class="w-56 h-12 md:flex hidden justify-center">
+                        <div class="h-full border-r-4 border-emerald-300 border-dashed"></div>
+                    </div>
+                    <div class="rounded-full w-12 h-12 text-2xl text-emerald-100 bg-emerald-700 font-black flex justify-center items-center absolute top-0 right-0 mt-16 shadow-lg mr-2">4</div>
+                    <img src="https://img.icons8.com/clouds/250/000000/open-envelope.png" class="transform hover:translate-y-6 hover:translate-x-5 hover:scale-150 transition
+                    duration-300 w-56 h-56 rounded-full shadow my-5 object-scale-down" alt="step3"/>
+                    <div class="w-56 h-12 md:flex hidden justify-center">
+                        <div class="h-full border-r-4 border-emerald-300 border-dashed"></div>
+                    </div>
+                </div>
+                <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-emerald-400">
+                    <div class="md:text-3xl uppercase text-xl font-extrabold text-emerald-700">Paso 4</div>
+                    <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Ver Campañas Creadas</div>
+                    <div class="mt-4 text-emerald-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                </div>
+                <x-jet-nav-link href="{{ route('showcampanas') }}" :active="request()->routeIs('showcampanas')">
+                    <img src="https://img.icons8.com/nolan/70/filled-sent.png" role="button"
+                        class="img-responsive w-20 h-20 rounded-full shadow-lg my-5 object-scale-down
+                        transform hover:object-scale-down  hover:rotate-90  hover:translate-y-5 hover:scale-150 transition duration-300 shadow-gray-500" alt="gotogroup"/>
+                    </x-jet-nav-link>
+                </div>
 
         </div>
 

@@ -19,6 +19,10 @@
     <a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact</a>
     </li>
     </ul>
+    <span class="block text-sm text-gray-500 sm:text-right dark:text-gray-400">
+        <p>Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6">Icons 8
+        </a> from <a href="https://icons8.com/illustrations">Ouch!</a></p>
+    </span>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
     <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" target="_blank" class="hover:underline">Flowbite™</a>. All Rights Reserved.

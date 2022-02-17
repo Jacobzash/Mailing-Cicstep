@@ -69,7 +69,7 @@
                             text-white text-lg font-bold py-2 px-4 rounded-xl shadow-xl  uppercase tracking-widest
                             outline-none focus:ring-4
                             transform active:scale-x-75 transition-transform mx-5 flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                 </svg>
                             <span class="ml-4">Guardar</span>

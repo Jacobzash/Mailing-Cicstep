@@ -1,8 +1,10 @@
 <x-app-layout>
     <x-slot name="header" class="shadow-2xl">
-        <h2 class="text-4xl lg:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-800">
-            MAILING CICSTEP
-        </h2>
+
+                <h1 class="text-4xl lg:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-800">
+                    MAILING CICSTEP
+
+                </h1>
     </x-slot>
 
     <div class="py-12">
@@ -46,6 +48,14 @@
                             alt="apple watch photo"
                             />
                         </div>
+
+                        <div class="swiper-slide">
+                            <img
+                            class="object-cover w-full h-96"
+                            src="/images/imagen7.jpg"
+                            alt="apple watch photo"
+                            />
+                        </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
@@ -56,14 +66,17 @@
 
                 <!--Presentacion-->
                 <section class="py-20 bg-white my-20">
-                    <div class="grid grid-cols-1 sm:grid-cols-2  gap-10 mx-auto  items-center max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2  gap-10   items-center max-w-6xl mx-auto">
                     <div class="px-4 md:mr-6">
                         <h2 class="text-4xl pr-6 sm:leading-snug tracking-tight font-bold text-black">
                         ¿QUE ES MAILING CICSTEP?
                         </h2>
-                        <p class="mt-4 text-stone-800 text-xl font-medium">
-                        Ingresar mensaje de que es.
+                        <p class="mt-4 text-stone-800 text-xl font-medium text-justify">
+                            Una plataforma de emailing es un software que nos permite crear y gestionar campañas
+                            de comunicación directa con nuestra audiencia o público objetivo mediante el envío
+                            de correos electrónicos masivos.
                         </p>
+                        <img src="/images/message.png" class="img-responsive items-center w-screen h-96 motion-safe:animate-pulse"/>
                     </div>
                     <div>
                         <div class="absolute bg-blue-500 transform -translate-x-10 relative h-64">
@@ -104,7 +117,7 @@
                                     <p tabindex="0" class="focus:outline-none uppercase text-xl hover:text-cyan-500 text-center text-amber-500 leading-4 font-mono">¿Eres nuevo en la plataforma? Sigue estos pasos:</p><br>
 
                                     <h1 tabindex="0" class="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800  pt-4">GUÍA PRÁCTICA DE  <p class="uppercase bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-800">MAILING cictep</p></h1>
-                                    <img src="https://img.icons8.com/color/60/000000/wakeup-hill-on-stairs.png" class="img-responsive animate-pulse "/>
+                                    <img src="/images/flame.png" class="img-responsive  max-w-screen-sm h-72 "/>
                                     <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto text-center">
                                         En este apartado podra visualizar una guia practica de instrucción que le permitira navegar e interactuar con la plataforma. Siga en orden los siguientes pasos para crear las campañas.
                                        </p>
@@ -150,7 +163,9 @@
                                                     Paso 1:
                                                 </p>
                                                  Agregar Grupos o Etiquetas</h2>
-                                            <p tabindex="0" class="focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">It provides a very simple start, no need to write a lot of code, you just import it and start the primitive components and create the ones you need.</p>
+                                            <p tabindex="0" class="text-justify focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">
+                                                Especificar el título o rótulo de las categorías o denominaciones generales dentro de las cuales
+                                                incluiremos nuestra base de datos de correos electrónicos para enviarles nuestra comunicación.</p>
                                         </div>
                                     </div>
 
@@ -171,7 +186,10 @@
                                             <h2 tabindex="0" class="focus:outline-none text-lg font-semibold leading-tight text-gray-800">
                                                 <p class="uppercase bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-600"><span class="animate-ping relative inline-flex rounded-full h-3 w-3 bg-indigo-700"></span>
                                                     Paso 2:</p> Agregar Contactos</h2>
-                                            <p tabindex="0" class="focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">Modify the visual appearance of your site – including colors, fonts, margins and other style-related properties – with a sophisticated style.</p>
+                                            <p tabindex="0" class="text-justify focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">
+                                                Subir la relación de contactos a quienes se enviará los correos electrónicos. Aquí se podrá agregar,
+                                                editar, listar o eliminar la base de contactos, ya sea de manera individual o masiva
+                                                (a través de la importación de contactos desde un documento en Excel).</p>
                                         </div>
                                     </div>
                                     <!--Campañas-->
@@ -190,8 +208,10 @@
                                         <div class="w-10/12">
                                             <h2 tabindex="0" class="focus:outline-none text-lg font-semibold leading-tight text-gray-800">
                                                 <p class="uppercase bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-600"><span class="animate-ping relative inline-flex rounded-full h-3 w-3 bg-indigo-700"></span>
-                                                    Paso 3:</p> Crear Campañas</h2>
-                                            <p tabindex="0" class="focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">Instead of just giving you the tools to create your own site, they offer you a list of themes you can choose from. Thus a handy product.</p>
+                                                    Paso 3:</p> Crear Campañas de Emailing</h2>
+                                            <p tabindex="0" class="text-justify focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">
+                                                Estructurar las campañas de envío masivo que se requiera. Una vez creada, la campaña se podrá
+                                                guardar para usarla como plantilla o enviarla inmediatamente.</p>
                                         </div>
                                     </div>
                                     <!--Calendario-->
@@ -210,8 +230,10 @@
                                         <div class="w-10/12">
                                             <h2 tabindex="0" class="focus:outline-none text-lg font-semibold leading-tight text-gray-800">
                                                 <p class="uppercase bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-600"><span class="animate-ping relative inline-flex rounded-full h-3 w-3 bg-indigo-700"></span>
-                                                    Paso 4:</p>Calendario - Programar envio de Campañas</h2>
-                                            <p tabindex="0" class="focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">We have chosen the bright color palettes that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
+                                                    Paso 4:</p>Programar envio de Campañas</h2>
+                                            <p tabindex="0" class="text-justify focus:outline-none text-base text-gray-600 leading-normal pt-2 indent-8">
+                                                Después de crear la campaña, si no deseamos enviarla en ese instante, podemos programar la
+                                                fecha y hora de envío posterior para que se ejecute de manera automática.</p>
                                         </div>
                                     </div>
                                 </div>
