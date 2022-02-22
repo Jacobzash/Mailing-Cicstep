@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="md:w-1/3 w-2/3">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/CTA.png" alt="cartoon avatars">
+                                <img src="/images/casuallife.png"  alt="contactos">
                                 </div>
                             </div>
                         </div>

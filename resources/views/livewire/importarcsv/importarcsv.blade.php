@@ -109,7 +109,7 @@
 
                                                                 </div>
                                                                 <p class="pointer-none text-gray-500 "> <input type="file" name="file" class="hidden"/>
-                                                                    <span class="text-sm">Arrastre y suelte archivos aquí <br /> o <a type="file" href="" id="" class="text-blue-600 hover:underline">seleccione un archivo</a> de su computadora</span></p></input>
+                                                                    <span class="text-sm">Arrastre y suelte archivos aquí <br /> o <a type="file" href="" id="" class="text-blue-600 hover:underline">seleccione un archivo</a> de su computadora</span></p>
                                                             </div>
 
 
@@ -119,7 +119,7 @@
                                                 <p class="text-base text-gray-400">
                                                     <span>Tipo de archivos: csv.</span>
                                                     <br>
-                                                    <span>Guarde su archivo de Excel en formato csv. <br>Si no sabes como hacerlo, <a href="" id="" class="text-blue-600 hover:underline">Sigue esta guia practica</a></span>
+                                                    <span>Guarde su archivo de Excel en formato csv. <br>Si no sabes como hacerlo, <a href="" id="" class="text-blue-700 hover:underline uppercase">Sigue esta guia practica</a></span>
 
                                                 </p>
                                         <div>
@@ -150,5 +150,22 @@
             clip: rect(10px, 150px, 130px, 10px);
         }
     </style>
+     @push('js')
+     <script src="sweetalert2.all.min.js"></script>
+
+        <script>
+
+            Livewire.on('saveimport',(msj)=>{
+                    Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: (msj),
+                    showConfirmButton: false,
+                    timer: 2000
+                    })
+                })
+
+        </script>
+         @endpush
 
 </x-app-layout>

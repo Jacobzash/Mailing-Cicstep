@@ -51,12 +51,11 @@ class ContactosImport implements
                 'lastnamecontacto' => $row['lastnamecontacto'],
                 'email' => $row['email'],
                 'phonecontacto' => $row['phonecontacto'],
-                'password' => Hash::make('password')
+                'gruposid' => $row['gruposid'],
+
             ]);
 
-            $contacto->address()->create([
-                'gruposid' => $row['gruposid']
-            ]);
+
         }
     }
 

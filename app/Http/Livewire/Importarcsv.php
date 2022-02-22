@@ -27,7 +27,9 @@ class Importarcsv extends Component
         if ($import->failures()->isNotEmpty()) {
             return back()->withFailures($import->failures());
         }
+        $this->msj="Guardado Correctamente";
 
+        $this->emit('saveimport',$this->msj);
 
         return back()->withStatus('Import in queue, we will send notification after import finished.');
     }

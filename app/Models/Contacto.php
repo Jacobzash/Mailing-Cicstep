@@ -20,7 +20,12 @@ class Contacto extends Model
 
     protected $guarded = [];
 
-    protected $fillable = ['namecontacto','lastnamecontacto','email','phonecontacto','gruposid'];
+    protected $fillable = [
+        'namecontacto',
+        'lastnamecontacto',
+        'email',
+        'phonecontacto',
+        'gruposid'];
 
 
 

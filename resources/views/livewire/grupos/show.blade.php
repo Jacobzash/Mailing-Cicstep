@@ -11,6 +11,7 @@
             </div>
         </div>
         @endif
+
         <section class="container mx-auto p-4">
 
             <div class="flex w-full overflow-x-auto">
@@ -34,6 +35,7 @@
                 @if($isModalOpen)
                 @include('livewire.grupos.create')
                 @endif
+
 
             </div>
         </section>
@@ -68,7 +70,7 @@
 							@foreach($grupos as $row)
 							<tr class="text-gray-900 items-center text-center">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm ">
-                                    {{ $loop->iteration }}
+                                    {{ $row->id }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm border border-gray-100">
                                     {{ $row->namegrupo }}

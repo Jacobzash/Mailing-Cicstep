@@ -17,7 +17,7 @@ class Contactos extends Component
     public $selected_id, $keyWord, $namecontacto, $lastnamecontacto;
     public $email, $phonecontacto, $contacto, $gruposid, $search = '', $msj;
     public $isModalOpen = 0;
-    public $paginate = 10;
+    public $paginate = 20;
 
     public $selectedgrupos = null;
     public $sortBy = 'asc';
@@ -80,13 +80,13 @@ class Contactos extends Component
                             $query->where('gruposid',$this->selectedgrupos);
                             })
                         ->search(trim($this->search))
-                        ->paginate(10);
+                        ->paginate(20);
         else
             $contactos =Contacto::join('grupos as g','g.id','contactos.gruposid')
 
                             ->select('contactos.*','g.namegrupo as grupos')
                             ->orderBy('contactos.namecontacto','asc')
-                            ->paginate(10);
+                            ->paginate(20);
 
 
         return view('livewire.contactos.show', [

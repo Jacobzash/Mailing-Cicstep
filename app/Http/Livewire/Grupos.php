@@ -15,6 +15,7 @@ class Grupos extends Component
     public $selected_id, $keyWord, $namegrupo, $description, $msj;
     public $isModalOpen = 0;
 
+
     protected $listeners = ['delete'];
 
     protected $rules = [
@@ -37,9 +38,10 @@ protected $messages = [
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.grupos.show', [
             'grupos' => Grupo::latest()
+                        ->orderBy('grupos.namegrupo','asc')
 						->orWhere('namegrupo', 'LIKE', $keyWord)
 						->orWhere('description', 'LIKE', $keyWord)
-						->paginate(10),
+						->paginate(20),
         ]);
     }
 

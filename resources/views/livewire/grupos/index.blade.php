@@ -17,17 +17,17 @@
                     bg-gradient-to-r from-indigo-500 via-violet-600 to-indigo-700
                     md:py-2 md:px-8 px-4  xl:px-8 xl:py-16">
                         <div>
-                            <div class="flex flex-wrap items-center md:flex-row flex-col-reverse">
-                                <div class="md:w-2/3 w-full pb-6 md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
+                            <div class="flex flex-nowrap items-center md:flex-row flex-col-reverse">
+                                <div class="md:w-full w-full pb-6 md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
                                     <!--Aspectradio video General-->
-                                    <div class="px-5 max-w-screen-xl sm:w-auto">
+                                    <div class="px-5 md:w-full sm:w-auto">
                                         <div class="aspect-w-10 aspect-h-5 ">
                                             <iframe src="/images/Indila.mp4" class="origin-bottom -rotate-6 rounded-xl shadow-2xl shadow-gray-800" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-1/3 w-2/3">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/CTA.png" alt="cartoon avatars">
+                                <img src="/images/groupeople.png" alt="cartoon avatars">
                                 </div>
                             </div>
                         </div>

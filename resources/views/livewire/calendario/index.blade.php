@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="md:w-1/3 w-2/3">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/CTA.png" alt="cartoon avatars">
+                                <img src="/images/workmail.png"  alt="calendario">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,11 @@
         <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-teal-200">
             <div class="md:text-3xl uppercase text-xl font-extrabold text-teal-700">Paso 1</div>
             <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear Grupos o Etiquetas</div>
-            <div class="mt-4 text-teal-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+            <div class="mt-4 text-teal-800 font-bold text-lg text-justify">
+                Debemos crear los grupos o etiquetas que nos permitirá identificar a nuestra base de contactos para
+                    crear las campañas. Solo debemos ingresar el nombre asignado y evitar repeticiones para tener un mejor
+                    control de cada grupo.
+            </div>
 
         </div>
 
@@ -96,7 +100,11 @@
             <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-pink-200">
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-pink-500">Paso 2</div>
                 <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear o Editar Contactos</div>
-                <div class="mt-4 text-pink-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                <div class="mt-4 text-pink-800 font-bold text-lg text-justify">
+                    Una vez creado el grupo, procedemos a crear los contactos para el envío de mensajes. En esta parte
+                        creamos los contactos digitando directamente en cada una de las casillas la información requerida.
+                        También podemos editar y eliminar los contactos que subamos.
+                </div>
             </div>
 
             </div>
@@ -123,7 +131,9 @@
         <div class="ml-5 p-10 flex flex-col justify-center max-w-2xl rounded bg-indigo-300">
             <div class="md:text-3xl uppercase text-xl font-extrabold text-indigo-700">Paso 3</div>
             <div class="md:text-3xl uppercase text-xl font-extrabold text-gray-800">Crear Campañas</div>
-            <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+            <div class="mt-4 text-indigo-800 font-bold text-lg text-justify">
+                Para crear una campaña se debe seguir una secuencia de pasos y completar la información requerida.
+            </div>
         </div>
         </div>
 

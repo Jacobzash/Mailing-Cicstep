@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="md:w-1/3 w-2/3">
-                                <img src="/images/flamemarketing.png" class="animate-bounce"  alt="cartoon avatars">
+                                <img src="/images/flamemarketing.png"   alt="campanas">
                                 </div>
                             </div>
                         </div>
